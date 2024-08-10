@@ -1,0 +1,60 @@
+---
+import clsx from "clsx"
+import Hero from "../components/Hero.astro"
+import Layout from "../layouts/Layout.astro"
+import Carousel from "../components/react/Carousel/Carousel"
+import ServiceSlider from "../components/react/Carousel/ServiceSlider"
+import Services from "../modules/Landing/Services/Services.astro"
+
+const SERVICES = [
+    {
+        title: "COMERCIALIZACIÓN DE MEDIOS",
+        description: ["(Radio, Prensa, TV): Potenciamos tu visibilidad en los medios tradicionales para llegar a una audiencia más amplia.", "(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "],
+        imageUrl: "/assets/medios.jpg"
+    },
+    {
+        title: "COMERCIALIZACIÓN DE MEDIOS",
+        description: ["(Radio, Prensa, TV): Potenciamos tu visibilidad en los medios tradicionales para llegar a una audiencia más amplia.", "(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "],
+        imageUrl: "/assets/medios.jpg"
+    },
+    {
+        title: "COMERCIALIZACIÓN DE MEDIOS",
+        description: ["(Radio, Prensa, TV): Potenciamos tu visibilidad en los medios tradicionales para llegar a una audiencia más amplia.", "(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "],
+        imageUrl: "/assets/medios.jpg"
+    },
+    {
+        title: "COMERCIALIZACIÓN DE MEDIOS",
+        description: ["(Radio, Prensa, TV): Potenciamos tu visibilidad en los medios tradicionales para llegar a una audiencia más amplia.", "(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "],
+        imageUrl: "/assets/medios.jpg"
+    },
+    {
+        title: "COMERCIALIZACIÓN DE MEDIOS",
+        description: ["(Radio, Prensa, TV): Potenciamos tu visibilidad en los medios tradicionales para llegar a una audiencia más amplia.", "(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "],
+        imageUrl: "/assets/medios.jpg"
+    },
+    {
+        title: "COMERCIALIZACIÓN DE MEDIOS",
+        description: ["(Radio, Prensa, TV): Potenciamos tu visibilidad en los medios tradicionales para llegar a una audiencia más amplia.", "(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "],
+        imageUrl: "/assets/medios.jpg"
+    },
+    {
+        title: "COMERCIALIZACIÓN DE MEDIOS",
+        description: ["(Radio, Prensa, TV): Potenciamos tu visibilidad en los medios tradicionales para llegar a una audiencia más amplia.", "(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "],
+        imageUrl: "/assets/medios.jpg"
+    },
+]
+
+
+---
+
+<Layout>
+    <Hero />
+    <div class="w-full bg-zinc-800 min-h-screen h-full mx-auto py-10 pb-52">
+        <!-- <ServiceSlider client:load /> -->
+        <Services />
+        <!-- <div class="mt-40">
+            <Carousel client:load />          
+        </div> -->
+    </div>
+</Layout>
+

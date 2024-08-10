@@ -1,0 +1,54 @@
+---
+// import ServiceItem from "./ServiceItem.astro"
+import ServiceSlider from "../../../components/react/Carousel/ServiceSlider"
+
+const SERVICES = [
+    {
+        title: "COMERCIALIZACIÓN DE MEDIOS",
+        description: ["(Radio, Prensa, TV): Potenciamos tu visibilidad en los medios tradicionales para llegar a una audiencia más amplia.", "(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "],
+        imageUrl: "/assets/medios.jpg",
+        icon: "fluent:slide-microphone-24-regular"
+    },
+    {
+        title: "COMERCIALIZACIÓN DE MEDIOS",
+        description: ["(Radio, Prensa, TV): Potenciamos tu visibilidad en los medios tradicionales para llegar a una audiencia más amplia.", "(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "],
+        imageUrl: "/assets/medios.jpg",
+        icon: "fluent:slide-microphone-24-regular"
+    },
+    {
+        title: "COMERCIALIZACIÓN DE MEDIOS",
+        description: ["(Radio, Prensa, TV): Potenciamos tu visibilidad en los medios tradicionales para llegar a una audiencia más amplia.", "(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "],
+        imageUrl: "/assets/medios.jpg",
+        icon: "fluent:slide-microphone-24-regular"
+    },
+    {
+        title: "COMERCIALIZACIÓN DE MEDIOS",
+        description: ["(Radio, Prensa, TV): Potenciamos tu visibilidad en los medios tradicionales para llegar a una audiencia más amplia.", "(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "],
+        imageUrl: "/assets/medios.jpg",
+        icon: "fluent:slide-microphone-24-regular"
+    },
+    {
+        title: "COMERCIALIZACIÓN DE MEDIOS",
+        description: ["(Radio, Prensa, TV): Potenciamos tu visibilidad en los medios tradicionales para llegar a una audiencia más amplia.", "(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard "],
+        imageUrl: "/assets/medios.jpg",
+        icon: "fluent:slide-microphone-24-regular"
+    },
+]
+---
+
+<div class="max-w-screen-content mx-auto relative h-[40rem] px-16">
+    <article class="z-10 absolute top-20 w-full left-0 px-16 flex gap-16">
+        <h2 class="top-40 mt-20 mr-[18%] font-semibold uppercase text-4xl whitespace-nowrap">
+            CONOCE NUESTROS <br> SERVICIOS
+        </h2>
+        <aside class="flex flex-col gap-4">
+            <p class="max-w-xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <button class="bg-white w-fit text-zinc-800 whitespace-nowrap px-8 py-3 rounded-full">
+                Adquirir Servicio
+            </button>
+        </aside>
+    </article>
+    
+    <ServiceSlider client:load />
+    <img src="/assets/Rectangle.svg" class="absolute left-0 w-full z-0" alt="Background container" />
+</div

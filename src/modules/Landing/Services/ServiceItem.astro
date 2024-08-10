@@ -1,0 +1,48 @@
+---
+import clsx from "clsx"
+import Icon from "../../../components/react/Icon"
+
+const { description, imageUrl, title, icon } = Astro.props
+---
+
+<article id="service" class="service bg-gradient-to-b h-[26rem] min-w-80 hover:min-w-[70%] duration-500 group overflow-hidden transition-all from-zinc-800/80 to-zinc-950/80 backdrop-blur-2xl py-4 px-6 rounded-xl border border-white/10 flex flex-col hover:flex-row gap-10">
+    <aside class="flex flex-col gap-4 items-center justify-between h-full w-fit">
+        <header class={clsx("flex w-fit flex-col gap-2 items-center justify-between group-hover:flex-row group-hover:items-start")}>
+            <div class="w-14 h-14 whitespace-break-spaces bg-violet-600 rounded-lg flex items-center justify-center flex-grow">
+                <Icon icon={icon} width="32" client:load />
+            </div>
+            <h3 class="text-center group-hover:block hidden group-hover:text-start font-semibold text-xl group-hover:text-lg">{title}</h3>
+        </header>
+        <h3 class="block group-hover:hidden text-center group-hover:text-start font-semibold text-xl group-hover:text-lg">{title}</h3>
+        
+        <div class="group-hover:block hidden min-w-56">
+            {description.map((text) => <p class="mb-2">{text}</p>)}
+        </div>
+        <button class="bg-white w-fit text-zinc-800 whitespace-nowrap px-8 py-3 rounded-full">
+            Adquirir Servicios
+        </button>
+    </aside>
+    
+    <img src={imageUrl} class="group-hover:block hidden rounded-xl" alt="" />
+</article>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const titulo = document.getElementById('titleElement');
+        const title = "AGENCIA DE MARKETING Y PUBLICIDAD"
+        const arr = title.split('')
+        let indice = 0;
+
+        function writeTitle() {
+            if (indice < arr.length) {
+                titulo.innerHTML += arr[indice] + '';
+                indice++;
+                setTimeout(writeTitle, 80); // Ajusta el tiempo de espera según lo necesario
+            } else {
+                titulo.style.borderRight = 'none';
+            }
+        }
+
+        writeTitle();
+    });
+</script>

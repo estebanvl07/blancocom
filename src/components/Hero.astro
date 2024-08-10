@@ -1,0 +1,84 @@
+---
+const collaborators = [
+    "/assets/DoctorDark.png",
+    "/assets/umbrella.png",
+    "/assets/NextmoveVariant.png",
+]
+---
+
+<div class="max-w-screen-content w-full flex pt-24 min-h-screen max-h-[52rem] items-center justify-between m-auto">
+    <article class="flex flex-col flex-grow gap-8 items-start justify-center relative" id="information">
+        <span class="px-4 py-1 bg-zinc-800/30 text-xs border border-white/10 rounded-full">Haz crecer tu negocio, contáctanos</span>
+        <h1 class="text-6xl font-bold" id="titleElement"></h1>
+        <div class="flex flex-row justify-between gap-4 bg-zinc-800/40 border border-white/10 rounded-full w-5/6 py-2 pl-8 pr-2">
+            <input type="text" placeholder="¡Quiero Trabajar con ustedes!" class="w-full bg-transparent outline-none text-lg">
+            <button class="h-16 rounded-full bg-fuchsia-600 flex justify-between pl-6 pr-2 gap-4 font-semibold items-center">
+                Enviar
+                <span class="w-12 h-12 rounded-full bg-white">
+                    
+                </span>
+            </button>
+        </div>
+        <p class="w-4/5">+10 años de experiencia en Marketing digital, ofreciendo soluciones innovadoras y estrategias personalizadas para aumentar la visibilidad, el engagement y el crecimiento sostenible de tu negocio. Confía en nosotros para tus necesidades digitales.</p>
+        <div class="flex items-center gap-4">
+            {
+                collaborators.map((src) => {
+                    return (    
+                        <img src={src} alt="" />
+                    )
+                })
+            }
+        </div>
+    </article>
+    <div class="flex items-center justify-center" id="image-sec">
+        <img src="/assets/hero-image.png" class="-rotate-[46deg] translate-x-[10%] scale-75 w-[90rem]" alt="">
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const titulo = document.getElementById('titleElement');
+        const title = "AGENCIA DE MARKETING Y PUBLICIDAD"
+        const arr = title.split('')
+        let indice = 0;
+
+        function writeTitle() {
+            if (indice < arr.length) {
+                titulo.innerHTML += arr[indice] + '';
+                indice++;
+                setTimeout(writeTitle, 80); // Ajusta el tiempo de espera según lo necesario
+            } else {
+                titulo.style.borderRight = 'none';
+            }
+        }
+
+        writeTitle();
+    });
+</script>
+
+<style>
+    #information::after {
+        content: "";
+        width: 80%;
+        height: 50px;
+        border-radius: 50%;
+        background: #7c3aed;
+        z-index: -1;
+        filter: blur(60px);
+        rotate: -5deg;
+        position: absolute;
+    }
+    #image-sec::after {
+        content: "";
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: #c026d3;
+        top: 35%;
+        z-index: -1;
+        filter: blur(80px);
+        position: absolute;
+    }
+        
+    
+</style>
